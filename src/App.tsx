@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import DatePicker from "./components/DatePicker";
+
+import TimePicker, {
+    Availability,
+    Slot,
+} from "./components/Timepicker/Timepicker";
+import dayjs, { Dayjs } from "dayjs";
+import BookingSteps from "./components/BookingSteps/Bookingsteps";
+import Bookingsteps from "./components/BookingSteps/Bookingsteps";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Bookingsteps />
+
+            {/* <Main /> */}
+        </div>
+    );
 }
 
 export default App;
